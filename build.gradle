@@ -1,0 +1,18 @@
+plugins {
+    id 'org.asciidoctor.convert' version '1.5.3'
+    id 'idea'
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+asciidoctor {
+    attributes =	[
+        'source-highlighter' : 'prettify',  // coderay, highlightjs, prettify, and pygments
+        'toc':'left',
+        'icons': 'font',
+        'setanchors':'true',
+    ]
+}

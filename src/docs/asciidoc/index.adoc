@@ -1,0 +1,125 @@
+:numbered:
+:toclevels: 4
+
+= Asciidoctor Gradle Starter Project
+
+== Building
+The documentation is written in http://asciidoctor.org/[AsciiDoc] and built using the
+http://asciidoctor.org/docs/asciidoctor-gradle-plugin/[Asciidoctor Gradle Plugin].
+To generate the documentation you run the `asciidoctor` gradle task.  This generates
+the HTML under `build\asciidoc` folder.  To make editing the documentation easier
+and more iterative, you can run the `asciidoctor` task using
+https://docs.gradle.org/current/userguide/continuous_build.html[Gradle's continuous build mode] by passing a `-t` or
+`--continuous` switches.
+
+----
+./gradlew asciidoctor -t
+----
+or on windows
+----
+gradlew.bat asciidoctor -t
+----
+
+== Editing
+You can edit AsciiDoc files in any text editor, but there are tools that are available
+that make it more of a WYSIWYG experience.
+
+=== Intellij
+The https://plugins.jetbrains.com/plugin/7391[AsciiDoc plugin] plugin for Intellij
+allows live preview of an asciidoc file in a full or splitscreen mode within
+the Intellij IDE.
+
+=== Chrome Extension
+The https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[AsciiDoctor Live Preview]
+extension allows you to open any AsciiDoctor file in Chrome and view changes being
+made to it live without any need to reload or refresh.
+
+== Documentation Examples
+
+=== Bulleted List
+
+[source,asciidoc]
+----
+* item one
+* item two
+* item three
+----
+
+Result:
+
+* item one
+* item two
+* item three
+
+
+=== Numbered List
+
+[source,aaa]
+----
+. item one
+. item two
+. item three
+----
+
+Result:
+
+. item one
+. item two
+. item three
+
+=== Table
+
+[source,asciidoc]
+----
+|===
+|heading 1 | heading 1
+
+|cell 1, row 1 | cell 2, row 1
+|cell 1, row 2 | cell 2, row 2
+
+|===
+----
+
+Result:
+
+|===
+|heading 1 | heading 1
+
+|cell 1, row 1 | cell 2, row 1
+|cell 1, row 2 | cell 2, row 2
+
+|===
+
+=== Source Code with Highlighting
+
+[source,asciidoc]
+----
+[source,java]
+ ----
+ /**
+  * main method
+  */
+ public static void main (String[] args) {
+     // comment
+ }
+ ----
+----
+
+Result:
+
+[source,java]
+----
+/**
+ * main method
+ */
+public static void main (String[] args) {
+    // comment
+}
+----
+
+== Additional References
+ * http://asciidoctor.org/[Asciidoctor]
+ * http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[Asciidoctor Quick Reference]
+ * http://asciidoctor.org/docs/asciidoctor-gradle-plugin/[Asciidoctor Gradle Plugin]
+ * https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[AsciiDoctor Live Preview Chrome Extension]
+ * https://plugins.jetbrains.com/plugin/7391[AsciiDoc plugin for IntelliJ]
