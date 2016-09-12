@@ -7,27 +7,27 @@
 The documentation is written in http://asciidoctor.org/[AsciiDoc] and built using the
 http://asciidoctor.org/docs/asciidoctor-gradle-plugin/[Asciidoctor Gradle Plugin].
 To generate the documentation you run the `asciidoctor` gradle task.  This generates
-the HTML under `build\asciidoc` folder.  To make editing the documentation easier
-and more iterative, you can run the `asciidoctor` task using
-https://docs.gradle.org/current/userguide/continuous_build.html[Gradle's continuous build mode] by passing a `-t` or
-`--continuous` switches.
+the HTML under `build\asciidoc` folder.
 
 ----
-./gradlew asciidoctor -t
+./gradlew asciidoctor
 ----
 or on windows
 ----
-gradlew.bat asciidoctor -t
+gradlew.bat asciidoctor
 ----
 
 == Editing
-You can edit AsciiDoc files in any text editor, but there are tools that are available
-that make it more of a WYSIWYG experience.
+You can edit AsciiDoc files in any text editor.  Update this documentation by editing the file `src/docs/asciidoc/index.adoc`
+and re-running the gradle `asciidoctor` task.  To make editing documentation more iterative, you can run the `asciidoctor`
+task using https://docs.gradle.org/current/userguide/continuous_build.html[Gradle's continuous build mode] by passing a
+ `-t` or `--continuous` switch on the command line.
+
+In addition to regular text editors, there are tools that can help make editing a more WYSIWYG experience.
 
 === Intellij
 The https://plugins.jetbrains.com/plugin/7391[AsciiDoc plugin] plugin for Intellij
-allows live preview of an asciidoc file in a full or splitscreen mode within
-the Intellij IDE.
+allows you to preview an AsciiDoc file from within the Intellij IDE as you make changes.
 
 === Chrome Extension
 The https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[AsciiDoctor Live Preview]
